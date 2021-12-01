@@ -61,6 +61,12 @@ const Fixed&	Fixed::max(const Fixed &n1, const Fixed &n2)
     return (n2);
 }
 
+const Fixed&	Fixed::min(const Fixed &n1, const Fixed &n2)
+{
+    if (n1.toFloat() < n2.toFloat())
+        return (n1);
+    return (n2);
+}
 
 
 
@@ -141,3 +147,17 @@ const Fixed 	Fixed::operator++(int)
     ++*this;
     return (new_fixed);
 }
+
+const Fixed& 	Fixed::operator--()
+{
+    fixed--;
+    return (*this);
+}
+
+const Fixed 	Fixed::operator--(int)
+{
+    Fixed new_fixed = *this;
+    --*this;
+    return (new_fixed);
+}
+

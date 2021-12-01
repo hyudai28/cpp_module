@@ -4,7 +4,7 @@
 #include <string>
 #include <iomanip>
 #include <cstdlib>
-#include "table.hpp"
+#include "contact.hpp"
 
 # define INDEX		0
 # define FSTNAME	1
@@ -16,24 +16,24 @@
 class Phonebook
 {
 	private:
-		Table table[8];
+		Contact Contact[8];
 
 	public:
 		Phonebook();
 		// ~Phonebook();
-		void	get_table_params(int table_i, int identifier);
-		int	tableIndex;
+		void	get_Contact_params(int Contact_i, int identifier);
+		int	ContactIndex;
 		void	phonebook_add(Phonebook phonebook);
 		void	add_input(Phonebook phonebook, int identifier, std::string message);
 		void	output_test();
+		void	detaile_show(int index);
 };
 
 //main
 void	phonebook_search(Phonebook phonebook);
 
-
 //search
-void	show_table(Phonebook phonebook);
+void	show_Contact(Phonebook phonebook);
 void	output_items(std::string str);
 void	ft_endline();
 

@@ -11,15 +11,15 @@ void	Phonebook::add_input(Phonebook phonebook, int identifier, std::string messa
 	if (std::cin.eof())
 		std::exit(0);
 	if (identifier == FSTNAME)
-		table[phonebook.tableIndex % 8].set_firstName(input);
+		Contact[phonebook.ContactIndex % 8].set_firstName(input);
 	else if (identifier == LSTNAME)
-		table[phonebook.tableIndex % 8].set_lastName(input);
+		Contact[phonebook.ContactIndex % 8].set_lastName(input);
 	else if (identifier == NCKNAME)
-		table[phonebook.tableIndex % 8].set_nickName(input);
+		Contact[phonebook.ContactIndex % 8].set_nickName(input);
 	else if (identifier == PHNNUM)
-		table[phonebook.tableIndex % 8].set_phoneNumber(input);
+		Contact[phonebook.ContactIndex % 8].set_phoneNumber(input);
 	else if (identifier == DRKSCRT)
-		table[phonebook.tableIndex % 8].set_darkestSecret(input);
+		Contact[phonebook.ContactIndex % 8].set_darkestSecret(input);
 }
 
 void	Phonebook::phonebook_add(Phonebook phonebook)
@@ -34,39 +34,45 @@ void	Phonebook::phonebook_add(Phonebook phonebook)
 }
 void	Phonebook::output_test()
 {
-	std::cout << table[0].get_firstName() << std::endl;
-	std::cout << table[1].get_firstName() << std::endl;
+	std::cout << Contact[0].get_firstName() << std::endl;
+	std::cout << Contact[1].get_firstName() << std::endl;
+}
+
+void	Phonebook::detaile_show(int index)
+{
+	this->get_Contact_params(index, FSTNAME);
+	this->get_Contact_params(index, LSTNAME);
+	this->get_Contact_params(index, PHNNUM);
+	this->get_Contact_params(index, NCKNAME);
+	this->get_Contact_params(index, DRKSCRT);
 }
 
 
-void	phonebook_search(Phonebook phonebook)
+void	Phonebook::get_Contact_params(int Contact_i, int identifier)
 {
-	show_table(phonebook);
-}
-
-
-
-
-int	main()
-{
-	Phonebook phonebook;
-	
-	start_message();
-	while (1)
+	std::string str;
+	if (identifier == INDEX)
 	{
-		std::string user_input_command;
-		input_wait();
-		std::getline (std::cin, user_input_command);
-		if (!user_input_command.compare("ADD"))
-		{
-			phonebook.phonebook_add(phonebook);
-			phonebook.tableIndex++;
-		}
-		else if (!user_input_command.compare("SEARCH"))
-			phonebook_search(phonebook);
-		else if (!user_input_command.compare("EXIT") || std::cin.eof())
-			std::exit(0);
-		else
-			std::cout << "invalid command, please input again" << std::endl;
+		std::cout << "|         " << Contact_i % 8;
+		return ;
 	}
+	else if (identifier == FSTNAME)
+		str = this->Contact[Contact_i % 8].get_firstName();
+	else if (identifier == LSTNAME)
+		str = this->Contact[Contact_i % 8].get_lastName();
+	else if (identifier == PHNNUM)
+		str = this->Contact[Contact_i % 8].get_nickName();
+	else if (identifier == NCKNAME)
+		str = this->Contact[Contact_i % 8].get_phoneNumber();
+	else if (identifier == DRKSCRT)
+		str = this->Contact[Contact_i % 8].get_darkestSecret();
+	output_items(str);
 }
+
+Phonebook::Phonebook()
+{
+	std::cout << "phonebook constructor" << std::endl;
+	ContactIndex = 0;
+}
+
+

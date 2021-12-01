@@ -21,6 +21,7 @@ public:
 	float	toFloat( void ) const;
 	int		toInt( void )const;
 	static const Fixed&	max(const Fixed &n1, const Fixed &n2);
+	static const Fixed&	min(const Fixed &n1, const Fixed &n2);
 	//operator calc
 	const Fixed	&operator=(const Fixed &src);
 	const Fixed 	operator+(const Fixed &fixed);
@@ -35,7 +36,9 @@ public:
 	const Fixed 	operator>(const Fixed &fixed);
 	const Fixed 	operator>=(const Fixed &fixed);
 	const Fixed& 	operator++();	//prefix
+	const Fixed& 	operator--();	//prefix
 	const Fixed 	operator++(int);	//postfix
+	const Fixed 	operator--(int);	//postfix
 
 
 };

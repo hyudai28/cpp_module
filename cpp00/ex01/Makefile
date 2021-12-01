@@ -1,21 +1,19 @@
 NAME := phonebook
 
-CC := g++
+CXX := clang++
 
-CFLAGS := -Wall -Werror -Wextra
+CXXFLAGS := -Wall -Werror -Wextra
 
-SRCS := phonebook.cpp
+SRCS := main.cpp
+SRCS += phonebook.cpp
 SRCS += contact.cpp
-SRCS += message.cpp
-SRCS += search.cpp
-SRCS += table.cpp
 
 OBJS := ${SRCS:.cpp=.o}
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+		$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 			rm -f $(OBJS)

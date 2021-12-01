@@ -1,33 +1,47 @@
 #include "phonebook.hpp"
 
-void	Phonebook::get_table_params(int table_i, int identifier)
+std::string Contact::get_firstName()
 {
-	std::string str;
-	if (identifier == INDEX)
-	{
-		std::cout << "|         " << table_i % 8;
-		return ;
-	}
-	else if (identifier == FSTNAME)
-		str = this->table[table_i % 8].get_firstName();
-	else if (identifier == LSTNAME)
-		str = this->table[table_i % 8].get_lastName();
-	else if (identifier == PHNNUM)
-		str = this->table[table_i % 8].get_nickName();
-	else if (identifier == NCKNAME)
-		str = this->table[table_i % 8].get_phoneNumber();
-	else if (identifier == DRKSCRT)
-		str = this->table[table_i % 8].get_darkestSecret();
-	output_items(str);
+	return (firstName);
+}
+std::string Contact::get_lastName()
+{
+	return (lastName);
+}
+std::string Contact::get_nickName()
+{
+	return (nickName);
+}
+std::string Contact::get_phoneNumber()
+{
+	return (phoneNumber);
+}
+std::string Contact::get_darkestSecret()
+{
+	return (darkestSecret);
 }
 
-Phonebook::Phonebook()
+void Contact::set_firstName(std::string input)
 {
-	std::cout << "phonebook constructor" << std::endl;
-	tableIndex = 0;
+	firstName = input;
 }
-
-Table::Table()
+void Contact::set_lastName(std::string input)
 {
-	std::cout << "table constructor" << std::endl;
+	lastName = input;
+}
+void Contact::set_nickName(std::string input)
+{
+	nickName = input;
+}
+void Contact::set_phoneNumber(std::string input)
+{
+	phoneNumber = input;
+}
+void Contact::set_darkestSecret(std::string input)
+{
+	darkestSecret = input;
+}
+Contact::Contact()
+{
+	std::cout << "Contact constructor" << std::endl;
 }
