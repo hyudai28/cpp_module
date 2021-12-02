@@ -12,6 +12,15 @@ int main(void)
     std::cout << Fixed::max(a, b) << std::endl;
     std::cout << Fixed::min(a, b) << std::endl;
     std::cout << --a << std::endl;
-    マックスはコンストありバージョンも作る必要あり
+
+
+    const Fixed c(1.5f);
+    const Fixed d(Fixed(5.05f) * Fixed(2));
+    std::cout << Fixed::max(c, d) << std::endl;
+    std::cout << Fixed::min(c, d) << std::endl;
+
+
+
+
     return 0;
 }
