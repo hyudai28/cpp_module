@@ -32,7 +32,7 @@ void	PresidentialPardonForm::excute(Bureaucrat const &bureaucrat)const
 	if (!this->getSign())
 		throw NotSignedExeption();
 	if (this->getExcutableGrade() <= bureaucrat.getGrade())
-		throw CanNotExcuteExeption();
+		throw CanNotexcuteExeption();
 	//std::cout << getTarget() << " has been pardoned by Zafod Beeblebrox." << std::endl;
 	std::cout << "*'``・* 。\n"
 			  << "　　|　　　　 `*。\n"

@@ -32,7 +32,7 @@ void	ShrubberyCreationForm::excute(Bureaucrat const &bureaucrat)const
 	if (!this->getSign())
 		throw NotSignedExeption();
 	if (this->getExcutableGrade() <= bureaucrat.getGrade())
-		throw CanNotExcuteExeption();
+		throw CanNotexcuteExeption();
 
 	std::string newFileName = getTarget();
 	newFileName.append("_shrubbery");

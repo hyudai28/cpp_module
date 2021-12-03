@@ -52,7 +52,7 @@ const char* Form::NotSignedExeption::what() const throw()
 {
 	return ("===ERR=== This form is not signed.");
 }
-const char* Form::CanNotExcuteExeption::what() const throw()
+const char* Form::CanNotexcuteExeption::what() const throw()
 {
 	return ("===ERR=== The position is too low to execute this form.");
 }

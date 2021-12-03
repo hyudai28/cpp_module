@@ -9,7 +9,7 @@ private:
 	/* data */
 public:
 	FragTrap();
-	FragTrap(std::string name);
+	FragTrap(const std::string &name);
 	FragTrap(FragTrap &src);
 	~FragTrap();
 	void	highFivesGuys(void);

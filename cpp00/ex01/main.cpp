@@ -89,7 +89,7 @@ int	main()
 		if (!user_input_command.compare("ADD"))
 		{
 			phonebook.phonebook_add(phonebook);
-			phonebook.ContactIndex++;
+			phonebook.ContactIndex = (phonebook.ContactIndex + 1) % 8;
 		}
 		else if (!user_input_command.compare("SEARCH"))
 			phonebook_search(phonebook);

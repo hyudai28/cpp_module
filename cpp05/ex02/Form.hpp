@@ -31,7 +31,7 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-	class	CanNotExcuteExeption: public std::exception
+	class	CanNotexcuteExeption: public std::exception
 	{
 		virtual const char* what() const throw();
 	};

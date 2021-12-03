@@ -32,7 +32,7 @@ void	RobotomyRequestForm::excute(Bureaucrat const &bureaucrat)const
 	if (!this->getSign())
 		throw NotSignedExeption();
 	if (this->getExcutableGrade() <= bureaucrat.getGrade())
-		throw CanNotExcuteExeption();
+		throw CanNotexcuteExeption();
 	std::cout << "+++++++++D+R+R+R+R+R+R+R+R+R+R+R+R+R+R+R++++++++" << std::endl;
 	if (rand() % 2)	
 		std::cout << getTarget() << " had a successful Robotomy." << std::endl;
