@@ -10,9 +10,6 @@ class DiamondTrap :public ScavTrap , public FragTrap
 private:
 	/* data */
 	std::string _Name;
-	using FragTrap::_HitPoints;
-	using FragTrap::_AttackDamage;
-	using ScavTrap::_EnergyPoints;
 public:
 	DiamondTrap();
 	DiamondTrap(std::string name);
