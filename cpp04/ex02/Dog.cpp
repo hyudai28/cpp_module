@@ -11,6 +11,7 @@ Dog::Dog (/* args */)
 Dog::Dog(const Dog& src)
 {
 	*this = src;
+	this->brain = new Brain();
 }
 
 Dog ::~Dog ()

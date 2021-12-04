@@ -11,6 +11,7 @@ Cat::Cat (/* args */)
 Cat::Cat(const Cat& src)
 {
 	*this = src;
+	this->brain = new Brain();
 }
 
 Cat ::~Cat ()

@@ -12,7 +12,7 @@ private:
 public:
 	Dog (/* args */);
 	Dog(const Dog& src);
-	~Dog ();
+	virtual ~Dog ();
 	Dog &operator=(const Dog &src);
 	void	makeSound() const;
 };

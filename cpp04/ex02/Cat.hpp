@@ -12,7 +12,7 @@ private:
 public:
 	Cat (/* args */);
 	Cat(const Cat& src);
-	~Cat ();
+	virtual ~Cat ();
 	Cat &operator=(const Cat &src);
 	void	makeSound() const;
 };

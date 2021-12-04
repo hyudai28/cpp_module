@@ -36,8 +36,14 @@ int main()
 	for (int i = 0; i < animal_count; i++)
 		delete animals[i];
 
+	// std::cout << std::endl;
+	// Dog basic;
+	// {
+	// 	Dog tmp = basic;
+	// 	std::cout << std::endl;
+	// }
 
-
+	// 	std::cout << std::endl;
 
 	//muntrace();
 	//system("leaks catAndDogHasABrain");
