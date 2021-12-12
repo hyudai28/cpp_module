@@ -29,12 +29,12 @@ public:
 	const Fixed 	operator*(const Fixed &fixed);
 	const Fixed 	operator/(const Fixed &fixed);
 	//operator comparison
-	const Fixed 	operator==(const Fixed &fixed);
-	const Fixed 	operator!=(const Fixed &fixed);
-	const Fixed 	operator<(const Fixed &fixed);
-	const Fixed 	operator<=(const Fixed &fixed);
-	const Fixed 	operator>(const Fixed &fixed);
-	const Fixed 	operator>=(const Fixed &fixed);
+	bool 	operator==(const Fixed &fixed) const;
+	bool 	operator!=(const Fixed &fixed) const;
+	bool 	operator<(const Fixed &fixed) const;
+	bool 	operator<=(const Fixed &fixed) const;
+	bool 	operator>(const Fixed &fixed) const;
+	bool 	operator>=(const Fixed &fixed) const;
 	const Fixed& 	operator++();	//prefix
 	const Fixed& 	operator--();	//prefix
 	const Fixed 	operator++(int);	//postfix

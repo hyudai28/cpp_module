@@ -5,7 +5,7 @@ class Fixed
 {
 private:
 	int int_num;
-	static const float float_num;
+	static const int fixedBits = 8;
 
 public:
 	Fixed();

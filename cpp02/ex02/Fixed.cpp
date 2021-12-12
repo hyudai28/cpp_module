@@ -104,32 +104,32 @@ const Fixed Fixed::operator/(const Fixed &right_fixed)
 
 
 
-const Fixed Fixed::operator==(const Fixed &right_fixed)
+bool Fixed::operator==(const Fixed &right_fixed) const
 {
     return (toFloat() == right_fixed.toFloat()? 1 : 0);
 }
 
-const Fixed Fixed::operator!=(const Fixed &right_fixed)
+bool Fixed::operator!=(const Fixed &right_fixed) const
 {
     return (!(toFloat() == right_fixed.toFloat()? 1 : 0));
 }
 
-const Fixed Fixed::operator<(const Fixed &right_fixed)
+bool Fixed::operator<(const Fixed &right_fixed) const
 {
     return (toFloat() < right_fixed.toFloat()? 1 : 0);
 }
 
-const Fixed Fixed::operator<=(const Fixed &right_fixed)
+bool Fixed::operator<=(const Fixed &right_fixed) const
 {
     return (toFloat() <= right_fixed.toFloat()? 1 : 0);
 }
 
-const Fixed Fixed::operator>(const Fixed &right_fixed)
+bool Fixed::operator>(const Fixed &right_fixed) const
 {
     return (toFloat() > right_fixed.toFloat()? 1 : 0);
 }
 
-const Fixed Fixed::operator>=(const Fixed &right_fixed)
+bool Fixed::operator>=(const Fixed &right_fixed) const
 {
     return (toFloat() >= right_fixed.toFloat()? 1 : 0);
 }
