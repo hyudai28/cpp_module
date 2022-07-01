@@ -1,15 +1,20 @@
 #include "phonebook.hpp"
 
 
-
+//空の情報を受け取ってしまう
 void	Phonebook::add_input(Phonebook phonebook, int identifier, std::string message)
 {
 	std::string input;
-	std::cout << message << std::endl;
-	// std::cin >> input;
-	std::getline(std::cin, input);
-	if (std::cin.eof())
-		std::exit(0);
+	while (1)
+	{
+		std::cout << message << std::endl;
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			std::exit(0);
+		if (input.length() != 0)
+			break ;
+		std::cout << "????" << std::endl;
+	}
 	if (identifier == FSTNAME)
 		Contact[phonebook.ContactIndex % 8].set_firstName(input);
 	else if (identifier == LSTNAME)
@@ -40,11 +45,11 @@ void	Phonebook::output_test()
 
 void	Phonebook::detaile_show(int index)
 {
-	this->get_Contact_params(index, FSTNAME);
-	this->get_Contact_params(index, LSTNAME);
-	this->get_Contact_params(index, PHNNUM);
-	this->get_Contact_params(index, NCKNAME);
-	this->get_Contact_params(index, DRKSCRT);
+	std::cout << "first name	:" << this->Contact[index % 8].get_firstName() << std::endl;
+	std::cout << "last name	:" << this->Contact[index % 8].get_lastName() << std::endl;
+	std::cout << "nick name	:" << this->Contact[index % 8].get_nickName() << std::endl;
+	std::cout << "phone number	:" << this->Contact[index % 8].get_phoneNumber() << std::endl;
+	std::cout << "darkest seacret	:" << this->Contact[index % 8].get_darkestSecret() << std::endl;
 }
 
 
