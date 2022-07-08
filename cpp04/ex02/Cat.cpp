@@ -11,7 +11,6 @@ Cat::Cat (/* args */)
 Cat::Cat(const Cat& src)
 {
 	*this = src;
-	this->brain = new Brain();
 }
 
 Cat ::~Cat ()
@@ -24,6 +23,7 @@ Cat ::~Cat ()
 Cat& Cat::operator=(const Cat &src)
 {
 	this->_Type = src.getType();
+	this->brain = new Brain();
 	return (*this);
 }
 

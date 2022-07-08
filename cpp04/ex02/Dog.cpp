@@ -11,7 +11,6 @@ Dog::Dog (/* args */)
 Dog::Dog(const Dog& src)
 {
 	*this = src;
-	this->brain = new Brain();
 }
 
 Dog ::~Dog ()
@@ -24,6 +23,7 @@ Dog ::~Dog ()
 Dog& Dog::operator=(const Dog &src)
 {
 	this->_Type = src.getType();
+	this->brain = new Brain();
 	return (*this);
 }
 
