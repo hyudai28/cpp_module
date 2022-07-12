@@ -15,12 +15,15 @@ Brain::~Brain()
 {
 	std::cout << "Brain destructor is called" << std::endl;
 }
+
 std::string	*Brain::getIdeas()
 {
 	return (this->ideas);
 }
+
 Brain&	Brain::operator=(const Brain &src)
 {
+	std::cout << "brain operator =" << std::endl;
 	for(int i = 0;i < 100; i++)
 		this->ideas[i] = src.ideas[i];
 	return (*this);

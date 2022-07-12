@@ -33,20 +33,20 @@ int main()
 	// for (int i = 0; i < animal_count; i++)
 	// 	delete animals[i];
 
-	//std::cout << "\n-----deep copy check----\n" << std::endl;
-	//Dog basic;
-	//std::cout << "-----" << std::endl;
-	//{
-	//	Dog tmp = basic;
-	//	//std::cout << std::endl;
-	//}
-
-	//	 std::cout << std::endl;
-
-
+	std::cout << "\n-----deep copy check----\n" << std::endl;
+	Dog basic;
+	std::cout << "-----" << std::endl;
 	{
-		Animal *ani = new Cat();
-		std::cout << ani->getType() << std::endl;
-		delete ani;
+		Dog tmp = basic;
+		std::cout << std::endl;
 	}
+
+		 std::cout << std::endl;
+
+	//std::cout << "---------virtual destructor test--------\n" << std::endl;
+	//{
+	//	Animal *ani = new Cat();
+	//	std::cout << ani->getType() << std::endl;
+	//	delete ani;
+	//}
 }
