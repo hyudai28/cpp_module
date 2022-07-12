@@ -3,7 +3,7 @@
 WrongAnimal::WrongAnimal(/* args */)
 {
 	std::cout << "constructor is called" << std::endl;
-	_Type = "WrongAnimal";
+	type = "WrongAnimal";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &src)
@@ -24,17 +24,17 @@ void	WrongAnimal::makeSound() const
 
 std::string	WrongAnimal::getType() const
 {
-	return (this->_Type);
+	return (this->type);
 }
 
-void	WrongAnimal::setType(std::string type)
+void	WrongAnimal::setType(std::string type_string)
 {
-	_Type = type; 
+	type = type_string; 
 }
 
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal &src)
 {
-	this->_Type = src.getType();
+	this->type = src.getType();
 	return (*this);
 }

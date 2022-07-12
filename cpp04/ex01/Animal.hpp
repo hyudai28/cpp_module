@@ -12,6 +12,7 @@ private:
 public:
 	Animal(/* args */);
 	Animal(const Animal &src);
+	//~Animal();
 	virtual ~Animal();
 	std::string getType() const;
 	void		setType(std::string type);

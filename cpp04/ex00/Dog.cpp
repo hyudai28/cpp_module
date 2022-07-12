@@ -3,7 +3,7 @@
 Dog::Dog (/* args */)
 {
 	std::cout << "Dog constructor called" << std::endl;
-	_Type = "Dog";
+	type = "Dog";
 }
 
 Dog::Dog(const Dog& src)
@@ -18,11 +18,11 @@ Dog ::~Dog ()
 
 Dog& Dog::operator=(const Dog &src)
 {
-	this->_Type = src.getType();
+	this->type = src.getType();
 	return (*this);
 }
 
 void	Dog::makeSound() const
 {
-	std::cout << _Type << " one" << std::endl;
+	std::cout << type << " one" << std::endl;
 }

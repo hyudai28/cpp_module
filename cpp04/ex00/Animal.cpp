@@ -3,7 +3,7 @@
 Animal::Animal(/* args */)
 {
 	std::cout << "constructor is called" << std::endl;
-	_Type = "Animal";
+	type = "Animal";
 }
 
 Animal::Animal(const Animal &src)
@@ -24,17 +24,16 @@ void	Animal::makeSound() const
 
 std::string	Animal::getType() const
 {
-	return (this->_Type);
+	return (this->type);
 }
 
-void	Animal::setType(std::string type)
+void	Animal::setType(std::string type_string)
 {
-	_Type = type; 
+	type = type_string; 
 }
-
 
 Animal&	Animal::operator=(const Animal &src)
 {
-	this->_Type = src.getType();
+	this->type = src.getType();
 	return (*this);
 }

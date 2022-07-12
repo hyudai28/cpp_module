@@ -3,7 +3,7 @@
 Cat::Cat (/* args */)
 {
 	std::cout << "Cat constructor called" << std::endl;
-	_Type = "Cat";
+	type = "Cat";
 }
 
 Cat::Cat(const Cat& src)
@@ -18,12 +18,11 @@ Cat ::~Cat ()
 
 Cat& Cat::operator=(const Cat &src)
 {
-	this->_Type = src.getType();
+	this->type = src.getType();
 	return (*this);
 }
 
-
 void	Cat::makeSound() const
 {
-	std::cout <<  _Type << " nyaaaaaaaaaaaa" << std::endl;
+	std::cout <<  type << " nyaaaaaaaaaaaa" << std::endl;
 }

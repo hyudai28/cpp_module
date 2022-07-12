@@ -2,7 +2,7 @@ NAME := catAndDogHasABrain
 
 CXX := clang++
 
-CXXFLAGS := -std=c++98 -Wall -Werror -Wextra -g -fsanitize=address
+CXXFLAGS := -std=c++98 #-Wall -Werror -Wextra -g -fsanitize=address
 
 SRCS := main.cpp
 SRCS += Animal.cpp

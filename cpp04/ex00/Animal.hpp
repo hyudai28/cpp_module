@@ -6,7 +6,7 @@
 class Animal
 {
 protected:
-	std::string _Type;
+	std::string type;
 private:
 	/* data */
 public:

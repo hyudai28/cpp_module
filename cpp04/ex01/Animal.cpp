@@ -2,7 +2,7 @@
 
 Animal::Animal(/* args */)
 {
-	std::cout << "constructor is called" << std::endl;
+	std::cout << "animal constructor is called" << std::endl;
 	_Type = "Animal";
 }
 
@@ -14,7 +14,7 @@ Animal::Animal(const Animal &src)
 
 Animal::~Animal()
 {
-	std::cout << "destructor is called" << std::endl;
+	std::cout << "animal destructor is called" << std::endl;
 }
 
 void	Animal::makeSound() const

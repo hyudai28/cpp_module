@@ -11,6 +11,7 @@ Dog::Dog (/* args */)
 Dog::Dog(const Dog& src)
 {
 	*this = src;
+	std::cout << "copy constructor dog" << std::endl;
 }
 
 Dog ::~Dog ()

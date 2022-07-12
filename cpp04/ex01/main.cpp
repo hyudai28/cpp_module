@@ -5,9 +5,6 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Brain.hpp"
-// #include <stdlib.h>
-// #include <mcheck.h>
-
 
 int main()
 {
@@ -36,15 +33,20 @@ int main()
 	// for (int i = 0; i < animal_count; i++)
 	// 	delete animals[i];
 
-	std::cout << std::endl;
-	Dog basic;
+	//std::cout << "\n-----deep copy check----\n" << std::endl;
+	//Dog basic;
+	//std::cout << "-----" << std::endl;
+	//{
+	//	Dog tmp = basic;
+	//	//std::cout << std::endl;
+	//}
+
+	//	 std::cout << std::endl;
+
+
 	{
-		Dog tmp = basic;
-		std::cout << std::endl;
+		Animal *ani = new Cat();
+		std::cout << ani->getType() << std::endl;
+		delete ani;
 	}
-
-		// std::cout << std::endl;
-
-	//muntrace();
-	// system("leaks catAndDogHasABrain");
 }
