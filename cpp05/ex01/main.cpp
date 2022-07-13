@@ -27,7 +27,9 @@ int	main(void)
 	try
 	{
 		Bureaucrat bob("bob2", 50);
-		Form	form("form", 0, 151, 40);
+		Form	form("form", 0, 15, 40);
+		std::cout << form << std::endl;
+		bob.signForm(form);
 		//error case
 	}
 	catch(const std::exception& e)

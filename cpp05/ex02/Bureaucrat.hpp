@@ -30,6 +30,7 @@ public:
 		virtual const char* what() const throw();
 	};
 	std::string getName() const;
+	id_t		executeForm(Form const & form);
 	int			getGrade() const;
 	void		setGrade(int grade);
 	void		GradeIncrement(int step);

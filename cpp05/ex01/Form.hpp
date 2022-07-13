@@ -12,13 +12,11 @@ class Bureaucrat;
 
 class Form
 {
-protected:
+private:
 	std::string const	_Name;
 	bool				_Sign;
 	int	const			_SignableGrade;
 	int	const			_ExcutableGrade;
-private:
-	/* data */
 public:
 	Form(std::string name, bool const sign, int const signableGrade, int const excutableGrade);
 	Form(const Form &src);

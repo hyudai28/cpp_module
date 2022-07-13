@@ -43,6 +43,7 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
+	virtual int	execute(Bureaucrat const & executor) = 0;
 	void		setSign();
 	std::string	getName() const;
 	int			getSign() const;
