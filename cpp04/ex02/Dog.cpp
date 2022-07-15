@@ -11,6 +11,7 @@ Dog::Dog (/* args */)
 Dog::Dog(const Dog& src)
 {
 	std::cout << "[Dog] copy constructor called" << std::endl;
+	this->brain = new Brain();
 	*this = src;
 	std::cout << "	copy constructored dog" << std::endl;
 }
@@ -24,8 +25,10 @@ Dog ::~Dog ()
 
 Dog& Dog::operator=(const Dog &src)
 {
+	if (this == &src)
+		return (*this);
 	this->_Type = src.getType();
-	this->brain = new Brain(*src.brain);
+	*this->brain = Brain(*src.brain);
 	return (*this);
 }
 
