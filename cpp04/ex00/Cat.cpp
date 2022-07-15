@@ -8,6 +8,7 @@ Cat::Cat (/* args */)
 
 Cat::Cat(const Cat& src)
 {
+	std::cout << "Cat copy constructor called" << std::endl;
 	*this = src;
 }
 

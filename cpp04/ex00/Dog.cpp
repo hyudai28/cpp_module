@@ -8,6 +8,7 @@ Dog::Dog (/* args */)
 
 Dog::Dog(const Dog& src)
 {
+	std::cout << "Dog copy constructor called" << std::endl;
 	*this = src;
 }
 

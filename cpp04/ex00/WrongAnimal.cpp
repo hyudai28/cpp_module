@@ -2,19 +2,19 @@
 
 WrongAnimal::WrongAnimal(/* args */)
 {
-	std::cout << "constructor is called" << std::endl;
+	std::cout << "Wrong Animal constructor is called" << std::endl;
 	type = "WrongAnimal";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &src)
 {
-	std::cout << "copy constructor is called" << std::endl;
+	std::cout << "Wrong Animal copy constructor is called" << std::endl;
 	*this = src;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "destructor is called" << std::endl;
+	std::cout << "Wrong Animal destructor is called" << std::endl;
 }
 
 void	WrongAnimal::makeSound() const
