@@ -1,15 +1,13 @@
 NAME := catAndDogHasABrain
 
-CXX := clang++
+CXX := c++
 
-CXXFLAGS := -std=c++98 -Wall -Werror -Wextra -g -fsanitize=address
+CXXFLAGS := -std=c++98 -Wall -Werror -Wextra
 
 SRCS := main.cpp
 SRCS += Animal.cpp
 SRCS += Dog.cpp
 SRCS += Cat.cpp
-SRCS += WrongAnimal.cpp
-SRCS += WrongCat.cpp
 SRCS += Brain.cpp
 
 

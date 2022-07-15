@@ -35,6 +35,8 @@ void	Animal::setType(std::string type)
 
 Animal&	Animal::operator=(const Animal &src)
 {
+	if (this == &src)
+		return (*this);
 	this->_Type = src.getType();
 	return (*this);
 }

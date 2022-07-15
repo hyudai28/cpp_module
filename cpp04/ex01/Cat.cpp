@@ -11,6 +11,7 @@ Cat::Cat (/* args */)
 Cat::Cat(const Cat& src)
 {
 	std::cout << "[Cat] copy constructor called" << std::endl;
+	this->brain = new Brain();
 	*this = src;
 }
 
@@ -23,8 +24,10 @@ Cat ::~Cat ()
 
 Cat& Cat::operator=(const Cat &src)
 {
+	if (this == &src)
+		return (*this);
 	this->_Type = src.getType();
-	this->brain = new Brain(*src.brain);
+	*this->brain = Brain(*src.brain);
 	return (*this);
 }
 
