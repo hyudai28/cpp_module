@@ -1,14 +1,17 @@
-NAME := Diamond
+NAME := bureaucrat
 
 CXX := c++
 
-CXXFLAGS := -std=c++98 -Wall -Werror -Wextra
+CXXFLAGS := -std=c++98 -Wall -Werror -Wextra -g -fsanitize=address
 
 SRCS := main.cpp
-SRCS += ClapTrap.cpp
-SRCS += ScavTrap.cpp
-SRCS += FragTrap.cpp
-SRCS += DiamondTrap.cpp
+SRCS += Bureaucrat.cpp
+SRCS += Form.cpp
+SRCS += RobotomyRequestForm.cpp
+SRCS += ShrubberyCreationForm.cpp
+SRCS += PresidentialPardonForm.cpp
+SRCS += Intern.cpp
+
 
 OBJS := ${SRCS:.cpp=.o}
 

@@ -1,6 +1,6 @@
 NAME := Zombie
 
-CXX := clang++
+CXX := c++
 
 CXXFLAGS := -Wall -Werror -Wextra
 

@@ -1,6 +1,6 @@
 NAME := HI_THIS_IS_BRAIN
 
-CXX := clang++
+CXX := c++
 
 CXXFLAGS := -Wall -Werror -Wextra
 

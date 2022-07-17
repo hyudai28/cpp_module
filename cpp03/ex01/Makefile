@@ -1,6 +1,6 @@
 NAME := Serena_my_love!
 
-CXX := clang++
+CXX := c++
 
 CXXFLAGS := -std=c++98 -Wall -Werror -Wextra
 

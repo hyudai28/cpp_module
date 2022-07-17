@@ -6,7 +6,6 @@
 
 int main()
 {
-	//mtrace();
 	//const Animal* j = new Dog();
 	//const Animal*i = new Cat();
 
@@ -35,9 +34,9 @@ int main()
 	Dog basic;
 	std::cout << "-----" << std::endl;
 	{
-		//Dog tmp = basic;
-		Dog tmp;
-		tmp = basic;
+		Dog tmp = basic;
+		//Dog tmp;
+		//tmp = basic;
 		std::cout << std::endl;
 	}
 

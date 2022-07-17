@@ -1,6 +1,6 @@
 NAME := Karen_2.0
 
-CXX := clang++
+CXX := c++
 
 CXXFLAGS := -Wall -Werror -Wextra
 

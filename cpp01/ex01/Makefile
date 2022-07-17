@@ -1,6 +1,6 @@
 NAME := ZombieHorde
 
-CXX := clang++
+CXX := c++
 
 CXXFLAGS := -Wall -Werror -Wextra
 
