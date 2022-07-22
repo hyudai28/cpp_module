@@ -3,21 +3,22 @@
 void	show_Contact(Phonebook phonebook)
 {
 	std::cout << phonebook.ContactIndex << std::endl;
-	std::string head = "-------------------------------------------------------";
+	std::string head = "---------------------------------------------";
 	std::cout << head << std::endl;
 	output_items("index");
 	output_items("firstName");
 	output_items("lastName");
 	output_items("nickname");
-	output_items("darkest secret");
+	//output_items("darkest secret");
 	ft_endline();
-	for(int x = 0;x < phonebook.ContactIndex && x < 8;x++)
+	//for(int x = 0;x < phonebook.ContactIndex && x < 8;x++)
+	for(int x = 0;x < phonebook.first_index && x < 8;x++)
 	{
 		phonebook.get_Contact_params(x, INDEX);
 		phonebook.get_Contact_params(x, FSTNAME);
 		phonebook.get_Contact_params(x, LSTNAME);
 		phonebook.get_Contact_params(x, NCKNAME);
-		phonebook.get_Contact_params(x, DRKSCRT);
+		//phonebook.get_Contact_params(x, DRKSCRT);
 		ft_endline();
 	};
 }
@@ -32,7 +33,7 @@ void	output_items(std::string str)
 
 void	ft_endline()
 {
-	std::string head = "-------------------------------------------------------";
+	std::string head = "---------------------------------------------";
 	std::cout << "|" << std::endl;
 	std::cout << head << std::endl;
 }
@@ -58,6 +59,8 @@ void	phonebook_search(Phonebook phonebook)
 	std::string input;
 
 	show_Contact(phonebook);
+	if (phonebook.first_index == 0)
+		return ;
 	while (1)
 	{
 		std::getline(std::cin, input);
@@ -66,7 +69,7 @@ void	phonebook_search(Phonebook phonebook)
 		if (input.length() == 1)
 		{
 			int num = input[0] - '0';
-			if (0 <= num && num <= 8)
+			if (0 <= num && num <= 8 && num <= phonebook.first_index - 1)
 			{
 				phonebook.detaile_show(num);
 				return ;
@@ -90,6 +93,9 @@ int	main()
 		{
 			phonebook.phonebook_add(phonebook);
 			phonebook.ContactIndex = (phonebook.ContactIndex + 1) % 8;
+			phonebook.first_index++;
+			if (phonebook.first_index >= 8)
+				phonebook.first_index = 8;
 		}
 		else if (!user_input_command.compare("SEARCH"))
 			phonebook_search(phonebook);

@@ -22,7 +22,8 @@ class Phonebook
 		Phonebook();
 		// ~Phonebook();
 		void	get_Contact_params(int Contact_i, int identifier);
-		int	ContactIndex;
+		int		ContactIndex;
+		int		first_index;
 		void	phonebook_add(Phonebook phonebook);
 		void	add_input(Phonebook phonebook, int identifier, std::string message);
 		void	output_test();

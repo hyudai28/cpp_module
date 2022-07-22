@@ -44,4 +44,5 @@ void Contact::set_darkestSecret(std::string input)
 Contact::Contact()
 {
 	//std::cout << "Contact constructor" << std::endl;
+	done = 0;
 }

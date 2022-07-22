@@ -11,6 +11,7 @@ class Contact
 		std::string nickName;
 		std::string phoneNumber;
 		std::string darkestSecret;
+		bool		done;
 	public:
 		Contact();
 		std::string get_firstName();

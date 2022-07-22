@@ -78,6 +78,7 @@ Phonebook::Phonebook()
 {
 	std::cout << "phonebook constructor" << std::endl;
 	ContactIndex = 0;
+	first_index = 0;
 }
 
 
