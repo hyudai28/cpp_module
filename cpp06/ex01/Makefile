@@ -1,11 +1,10 @@
-NAME := Scalar
+NAME := serialization
 
 CXX := c++
 
 CXXFLAGS := -std=c++98 -Wall -Werror -Wextra
 
 SRCS := main.cpp
-SRCS += scalar.cpp
 
 
 OBJS := ${SRCS:.cpp=.o}

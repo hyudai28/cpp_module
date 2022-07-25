@@ -1,11 +1,19 @@
-#include <sstream>
-#include <iostream>
+#include "scalar.h"
 
-int main() {
-    std::string str = "42";
-    std::istringstream iss(str);
+int	isValid(int argc, char **argv)
+{
+	if (argc != 2)
+		return (1);
+	(void)argv;
+	return (0);
+}
 
-    int num;
-    iss >> num;
-    std::cout << num << std::endl; // 「42」と表示される
+int main(int argc, char **argv)
+{
+    if (isValid(argc, argv))
+    {
+        std::cerr << "Error.\n  Invalid arguments" << std::endl;
+        return (1);
+    }
+    scalar_print(argv[1]);
 }
