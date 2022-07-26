@@ -30,7 +30,34 @@ Base * generate(void)
 
 void	identify(Base &p)
 {
-	(void)p;
+	try
+	{
+		A &a = dynamic_cast<A&>(p);
+		std::cout << "Type is [A]" << std::endl;
+		(void)a;
+		return;
+	}
+	catch (std::exception &e){}
+	try
+	{
+		B &b = dynamic_cast<B&>(p);
+		std::cout << "Type is [B]" << std::endl;
+		(void)b;
+		return;
+	}
+	catch (std::exception &e){}
+	try
+	{
+		C &c = dynamic_cast<C&>(p);
+		std::cout << "Type is [C]" << std::endl;
+		(void)c;
+		return;
+	}
+	catch (std::exception &e){}
+
+
+
+
 }
 
 void	identify(Base *p)
