@@ -34,6 +34,13 @@ void	Span::addNumber(int addNum)
 	this->number.push_back(addNum);
 }
 
+void	Span::addNumbers(std::vector<int> v)
+{
+	if (this->number.size() + v.size() > this->_N)
+		throw std::length_error("Span size is full.");
+	this->number.insert(this->number.end(), v.begin(), v.end());
+}
+
 int		Span::shortestSpan()
 {
 	if (this->number.size() < 1)
