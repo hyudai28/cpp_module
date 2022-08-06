@@ -49,8 +49,6 @@ int main()
 		}
 	}
 
-
-
 	{
 		//char test
 		MutantStack<std::string> str;

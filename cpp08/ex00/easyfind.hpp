@@ -10,7 +10,7 @@ int easyfind(const T &cntn, int n)
 	typename T::const_iterator itr = std::find(cntn.begin(), cntn.end(), n);
 	if (itr == cntn.end())
 		return (-1);
-	return *itr;
+	return std::distance(cntn.begin(), itr);
 }
 
 #endif
