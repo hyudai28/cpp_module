@@ -23,6 +23,7 @@ Span& Span::operator=(const Span &src)
 {
 	if (this == &src)
 		return (*this);
+	this->_N = src._N;
 	this->number = src.number;
 	return (*this);
 }
@@ -43,7 +44,7 @@ void	Span::addNumbers(std::vector<int> v)
 
 int		Span::shortestSpan()
 {
-	if (this->number.size() < 1)
+	if (this->number.size() <= 1)
 		throw std::length_error("Span size is zero, or 1.");
 
 	std::sort(this->number.begin(), this->number.end());
@@ -63,7 +64,7 @@ int		Span::shortestSpan()
 
 int		Span::longestSpan()
 {
-	if (this->number.size() < 1)
+	if (this->number.size() <= 1)
 		throw std::length_error("Span size is zero, or 1.");
 	return (*std::max_element(this->number.begin(), this->number.end()) -\
 		*std::min_element(this->number.begin(), this->number.end()));

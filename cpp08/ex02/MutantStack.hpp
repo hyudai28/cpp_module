@@ -23,7 +23,7 @@ public:
 	{
 		if (this == &src)
 			return (*this);
-		return (src);
+		return std::stack<T>::operator=(*this, src);
 	}
 	typedef typename std::stack<T>::container_type::iterator iterator;
 	iterator	begin()
