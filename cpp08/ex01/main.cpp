@@ -67,5 +67,19 @@ int main()
 		}
 	}
 
+	{
+		Span one = Span(10);
+		one.addNumber(20);
+		try
+		{
+			std::cout << one.shortestSpan() << std::endl;
+		}
+		catch (const std::exception &e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+		std::cout << "size maybe one" << std::endl;
+	}
+
 	return 0;
 }
