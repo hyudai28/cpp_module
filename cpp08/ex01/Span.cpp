@@ -42,27 +42,27 @@ void	Span::addNumbers(std::vector<int> v)
 	this->number.insert(this->number.end(), v.begin(), v.end());
 }
 
-int		Span::shortestSpan()
+unsigned int		Span::shortestSpan()
 {
 	if (this->number.size() <= 1)
 		throw std::length_error("Span size is zero, or 1.");
 
 	std::sort(this->number.begin(), this->number.end());
-	int ret = this->number[1] - this->number[0];
+	unsigned int ret = this->number[1] - this->number[0];
 	// std::cout << "start" << std::endl;
 	// std::cout << ret << " = " << this->number[1] << " - " << this->number[0] << std::endl;
 	for (int i=1; i + 1 < static_cast<int>(this->number.size()); i++)
 	{
-		if (ret > this->number[i + 1] - this->number[i])
+		if (ret > static_cast<unsigned int>(this->number[i + 1] - this->number[i]))
 		{
-			ret = this->number[i + 1] - this->number[i];
+			ret = static_cast<unsigned int>(this->number[i + 1] - this->number[i]);
 			// std::cout << ret << " = " << this->number[i + 1] << " - " << this->number[i] << std::endl;
 		}
 	}
 	return (ret);
 }
 
-int		Span::longestSpan()
+unsigned int		Span::longestSpan()
 {
 	if (this->number.size() <= 1)
 		throw std::length_error("Span size is zero, or 1.");

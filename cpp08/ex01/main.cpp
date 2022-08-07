@@ -1,6 +1,7 @@
 #include "Span.hpp"
 #include <vector>
 #include <stdlib.h>
+#include <climits>
 
 #define MAX_NUM 100000
 
@@ -73,6 +74,22 @@ int main()
 		try
 		{
 			std::cout << one.shortestSpan() << std::endl;
+		}
+		catch (const std::exception &e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+		std::cout << "size maybe one" << std::endl;
+	}
+
+	{
+		Span one = Span(10);
+		one.addNumber(INT_MAX);
+		one.addNumber(INT_MIN);
+		try
+		{
+			std::cout << one.shortestSpan() << std::endl;
+			std::cout << one.longestSpan() << std::endl;
 		}
 		catch (const std::exception &e)
 		{
